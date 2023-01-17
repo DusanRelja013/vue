@@ -1,0 +1,44 @@
+.mass-market-button {
+  display: flex;
+  width: fit-content;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
+  padding: 1.5rem 2.7rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  color: #231D4F;
+  white-space: nowrap;
+  font-family: "AlataRegular", sans-serif;
+  position: relative;
+
+  &:disabled {
+    pointer-events: none;
+  }
+
+  &--transparent {
+    border: 2px solid #EEEEEE;
+    background-color: transparent;
+  }
+
+  &--important {
+    background-color: #2453FF;
+    color: #FFFFFF;
+
+    &:hover {
+      background-color: #003CE2;
+    }
+  }
+
+  &--valid {
+    background-color: #6BBFE2;
+    color: #FFFFFF;
+  }
+
+  .animation-text {
+    visibility: hidden;
+  }
+}

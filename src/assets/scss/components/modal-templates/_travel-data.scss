@@ -1,0 +1,396 @@
+.modal-travel-data {
+  display: flex;
+  flex-direction: row;
+  margin: 2.5rem 8.5rem;
+  background-color: #FFFFFF;
+
+  @include multiple-media(tabletScreen, smallScreen) {
+    flex-direction: column-reverse;
+    overflow: auto;
+    width: 75rem;
+    height: 90vh;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  @include multiple-media(mobileScreen) {
+    flex-direction: column-reverse;
+    overflow-y: auto;
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
+    margin: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .travel-data-info {
+    display: flex;
+    flex-direction: column;
+    padding: 7.5rem 4rem;
+
+    @include multiple-media(mobileScreen) {
+      min-width: 100vw;
+      width: 10vw;
+      padding: 0 1.5rem;
+    }
+
+
+    @include multiple-media(tabletScreen, smallScreen) {
+      padding: 4.5rem 3.7rem;
+    }
+
+    .data-info {
+      display: flex;
+      flex-direction: column;
+      gap: 7rem;
+
+      @include multiple-media(mobileScreen) {
+        gap: 4rem;
+      }
+
+      &-title {
+        font-size: 3.5rem;
+        line-height: 4.8rem;
+        color: #231D4F;
+
+        @include multiple-media(mobileScreen) {
+          font-size: 2.1rem;
+
+          @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+            margin-bottom: 4rem;
+          }
+        }
+      }
+
+      &-steps {
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+
+        @include multiple-media(mobileScreen) {
+          flex-direction: column;
+        }
+
+        .step {
+          display: flex;
+          flex-direction: column;
+          border: 1px solid #E0E0E0;
+          border-radius: 10px;
+          padding: 1.5rem;
+          max-width: 36rem;
+          width: 36rem;
+          flex-grow: 1;
+
+          @include multiple-media(mobileScreen) {
+            max-width: 100%;
+
+            @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+              margin-bottom: 3rem;
+            }
+          }
+
+          &-header {
+            border: 1.5px solid #7FCDEE;
+            width: 5rem;
+            height: 5rem;
+            display: flex;
+            align-items: center;
+            border-radius: 50%;
+            justify-content: center;
+
+            &__number {
+              font-size: 2rem;
+              line-height: 3rem;
+              color: #231D4F;
+            }
+          }
+
+          &-title {
+            margin-top: 2.4rem;
+            font-size: 2.1rem;
+            line-height: 2.9rem;
+            color: #231D4F;
+          }
+
+          &-description {
+            margin-top: 2.4rem;
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+            color: #7686AB;
+
+          }
+        }
+      }
+    }
+
+    .data-check {
+      display: flex;
+
+      .check-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-top: 7rem;
+
+        @include multiple-media(mobileScreen) {
+          flex-direction: column;
+          flex-wrap: nowrap;
+          margin-top: 4rem;
+        }
+
+        .check {
+          display: flex;
+          flex-direction: row;
+          gap: 1rem;
+          align-items: flex-start;
+          flex-basis: 30%;
+          flex-grow: 1;
+
+          @include multiple-media(mobileScreen) {
+            @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+              &:not(:last-child) {
+                margin-bottom: 2rem;
+              }
+            }
+          }
+
+          &-status {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #2453FF;
+            width: 2rem;
+            min-width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            margin-top: .5rem;
+
+            @include multiple-media(mobileScreen) {
+              @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+                margin-right: 1rem;
+              }
+            }
+
+            &__image {
+              width: 1rem;
+            }
+          }
+
+          &-description {
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+            color: #7686AB;
+          }
+        }
+      }
+    }
+  }
+
+  .travel-data-requirements {
+    background: #3055D9;
+    padding: 5.4rem 3.8rem;
+    min-width: 45rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @include multiple-media(mobileScreen) {
+      min-width: 100vw;
+      padding: 5rem 1.6rem;
+    }
+
+    @include multiple-media(tabletScreen, smallScreen) {
+      padding: 4rem 15rem;
+    }
+
+    .requirements__icon {
+      display: flex;
+      align-self: flex-end;
+      margin-top: -4rem;
+      margin-right: -3rem;
+      width: 2rem;
+      cursor: pointer;
+
+      @include multiple-media(tabletScreen, smallScreen) {
+        margin-top: 0;
+        margin-right: -12rem;
+      }
+
+      @include multiple-media(mobileScreen) {
+        margin-top: 2rem;
+        margin-right: 2rem;
+      }
+    }
+
+    .requirements__title {
+      font-size: 2.3rem;
+      color: #FFFFFF;
+      margin-bottom: 2rem;
+    }
+
+    .requirements__description {
+      font-size: 2.8rem;
+      line-height: 3.8rem;
+      color: #FFFFFF;
+      margin-bottom: 1.5rem;
+    }
+
+    .travel-period {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.3rem;
+      margin-bottom: 2rem;
+
+      .period {
+        display: flex;
+        color: #FFFFFF;
+
+        @include multiple-media(mobileScreen) {
+          @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+            &:not(:last-child) {
+              margin-bottom: 1.3rem;
+            }
+          }
+        }
+
+        &-image {
+          margin-right: 1rem;
+          width: 2rem;
+        }
+
+        &-text {
+          font-family: "Alata", sans-serif;
+          margin-right: 1.5rem;
+          font-size: 1.5rem;
+          min-width: 4.2rem;
+        }
+
+        &-result {
+          font-family: "Alata", sans-serif;
+          font-size: 1.5rem;
+        }
+      }
+
+     }
+    .travel-options {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+      flex-grow: 1;
+
+      &-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.7rem;
+
+        .empty-item {
+          width: 1.6rem;
+        }
+      }
+
+      .mass-market-select {
+        width: 100%;
+
+        @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+          &:not(:last-child) {
+            margin-bottom: 1.6rem;
+          }
+        }
+      }
+
+      &-quantity {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-grow: 1;
+        justify-content: space-between;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 4px;
+        padding: 1.3rem;
+        margin-top: .7rem;
+
+        &__title {
+          font-family: 'Alata', sans-serif;
+          font-size: 1.5rem;
+          line-height: 2.1rem;
+          color: #FFFFFF;
+        }
+
+      }
+
+      &__add {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+        flex-grow: 1;
+
+        .card-price {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          &-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+          }
+
+          &-currency {
+            font-size: 1.5rem;
+            color: #FFFFFF;
+          }
+
+          &__title {
+            font-size: 1.5rem;
+            color: #FFFFFF;
+
+            @include multiple-media(mobileScreen) {
+              @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+                margin-bottom: 1rem;
+              }
+            }
+          }
+
+          &__value {
+            font-size: 2.3rem;
+            color: #FFFFFF;
+
+            @include multiple-media(mobileScreen) {
+              @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+                margin-bottom: 1rem;
+              }
+            }
+          }
+        }
+
+        .mass-market-button {
+          padding: 1.5rem 5rem;
+        }
+      }
+
+      &-invalid {
+        font-family: "Alata", sans-serif;
+        color: #FF565E;
+        font-size: 1.6rem;
+        display: flex;
+        text-align: left;
+        align-self: flex-start;
+      }
+    }
+  }
+}

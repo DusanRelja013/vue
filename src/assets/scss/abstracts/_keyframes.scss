@@ -1,0 +1,66 @@
+.toaster-enter-active {
+  animation: toaster .5s ease-in;
+}
+.toaster-leave-active {
+  animation: toaster .4s reverse;
+}
+
+.modal-enter-active {
+  animation: modal .3s ease-out;
+}
+.modal-leave-active {
+  animation: modal .3s reverse;
+}
+
+.fade-enter-active {
+  animation: fade .3s ease-in;
+}
+.fade-leave-active {
+  animation: fade .3s reverse;
+}
+
+@keyframes toaster {
+  from {
+    opacity: 1;
+    transform: translateX(350px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@include multiple-media(tabletScreen, smallScreen, mediumScreen, largeScreen, ultraLargeScreen) {
+  @keyframes modal {
+
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+@include multiple-media(mobileScreen) {
+  @keyframes modal {
+
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@keyframes fade {
+
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "test": "Test de",
+  "validations": {
+    "email": "Enter valid email address",
+    "required": "Field is required",
+    "invalid": "Please enter valid data"
+  }
+}

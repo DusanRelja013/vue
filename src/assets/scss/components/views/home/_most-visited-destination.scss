@@ -1,0 +1,74 @@
+.home-most-visited {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+
+  &__title {
+    font-size: 3rem;
+    line-height: 4.1rem;
+    color: #231D4F;
+    margin-top: 12rem;
+
+    @include multiple-media(mobileScreen, tabletScreen) {
+      margin-top: 6rem;
+      font-size: 2.3rem;
+    }
+  }
+
+  .visited-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    gap: 4.7rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    justify-content: center;
+
+    @include multiple-media(mobileScreen) {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      overflow-x: auto;
+      width: calc(100vw - 4rem);
+      margin-top: 3.2rem;
+      gap: 4rem;
+    }
+    @include multiple-media(tabletScreen) {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1.6rem;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .load-more {
+    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+
+    @include multiple-media(mobileScreen, tabletScreen) {
+      display: none;
+    }
+
+    &-title {
+      font-size: 1.5rem;
+      color: #7686AB;
+    }
+
+    &-icon {
+      background: #2453FF;
+      padding: .8rem;
+      border-radius: 50%;
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+  }
+}

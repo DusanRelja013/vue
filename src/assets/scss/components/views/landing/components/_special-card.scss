@@ -1,0 +1,90 @@
+.special-card {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 3px solid rgba(29, 80, 215, 0.6);
+  border-radius: 26px;
+  padding: 2rem;
+  width: 30.2rem;
+  height: 41rem;
+
+  @include multiple-media(mobileScreen, tabletScreen, smallScreen, mediumScreen) {
+    min-width: 30rem;
+    margin-right: 2rem;
+  }
+
+  &-status {
+    display: flex;
+    align-self: flex-end;
+    background: rgba(18, 183, 106, 0.2);
+    border-radius: 6px;
+    color: #12B76A;
+    padding: .5rem .9rem;
+  }
+  &-title {
+    font-family: "AlataRegular", sans-serif;
+    font-size: 2.3rem;
+    line-height: 3.1rem;
+    color: #231D4F;
+    margin-top: 1.7rem;
+  }
+  &-description {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    color: #7686AB;
+    margin-top: 1.5rem;
+  }
+  &-details {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    margin-top: 2.7rem;
+    margin-bottom: 2.7rem;
+
+    .detail-item {
+      display: flex;
+      flex-direction: row;
+      gap: .9rem;
+
+      &__icon {
+        background: rgba(82, 67, 194, 0.103693);
+        padding: .4rem;
+        border-radius: 50%;
+      }
+
+      &__title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        color: #231D4F;
+      }
+    }
+  }
+  &-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .card-price {
+      display: flex;
+      flex-direction: column;
+
+      &--title {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+        color: #848199;
+      }
+      &--value {
+        font-size: 2.3rem;
+        line-height: 3.1rem;
+        font-family: "AlataRegular", sans-serif;
+        color: #2453FF;
+      }
+    }
+
+    .mass-market-button {
+      padding: 1rem 1.9rem;
+      height: 4rem;
+    }
+  }
+}

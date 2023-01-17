@@ -1,0 +1,82 @@
+// Abstract
+@import "abstracts/mixins";
+@import "abstracts/keyframes";
+// Base
+@import "./base/_reset.scss";
+@import "./base/_typography.scss";
+
+// Layouts
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/modal";
+
+// Elements
+@import "components/elements/button";
+@import "components/elements/select";
+@import "components/elements/date-picker";
+@import "components/elements/label";
+@import "components/elements/input";
+@import "components/elements/message";
+@import "components/elements/checkbox";
+@import "components/elements/toggle";
+@import "components/elements/tooltip";
+
+// Modals
+@import "components/modal-templates/travel-data";
+@import "components/modal-templates/sign-up";
+@import "components/modal-templates/login";
+@import "components/modal-templates/create-account";
+@import "components/modal-templates/reset-password";
+@import "components/modal-templates/delete-cart";
+@import "components/modal-templates/payment-failed";
+@import "components/modal-templates/payment-success";
+@import "components/modal-templates/travel-requirements";
+@import "components/modal-templates/verify-email";
+@import "components/modal-templates/authentication";
+
+// Views
+@import "components/views/home.scss";
+@import "components/views/chart";
+@import "components/views/wishlist";
+@import "components/views/payment";
+@import "components/views/terms";
+
+// Page Home
+@import "components/views/home/how-it-works";
+@import "components/views/home/most-visited-destination";
+@import "components/views/home/travel-map";
+@import "components/views/home/trip-requirements";
+
+// Page Home - > components
+@import "components/views/home/components/visited-card";
+@import "components/views/home/components/requirements-card";
+@import "components/views/home/components/restriction-details";
+
+// Page Landing
+@import "components/views/_landing.scss";
+@import "components/views/landing/welcome";
+@import "components/views/landing/information";
+@import "components/views/landing/travel-requirements";
+@import "components/views/landing/covid";
+@import "components/views/landing/explore";
+@import "components/views/landing/places";
+@import "components/views/landing/travel-tips";
+
+// Pages Landing - > components
+@import "components/views/landing/components/travel-card";
+@import "components/views/landing/components/special-card";
+@import "components/views/landing/components/travel-fact";
+@import "components/views/landing/components/empty-travel-card";
+
+// Page Payment
+@import "components/views/payment/total-payment";
+@import "components/views/payment/secure-payment";
+
+// Shared components
+@import "components/shared/star-score";
+@import "components/shared/quantity";
+@import "components/shared/dot-elastic";
+@import "components/shared/widget";
+@import "components/shared/toaster";
+@import "components/shared/weglot";
+@import "components/shared/spinner";

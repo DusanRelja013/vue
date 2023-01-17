@@ -1,0 +1,31 @@
+.mass-market-tooltip {
+  display: flex;
+  position: relative;
+
+  .tooltip-icon {
+    width: 1.6rem;
+  }
+
+  .tooltip-context {
+    position: absolute;
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    box-shadow: 0 4px 30px rgba(38, 51, 77, 0.25);
+    border-radius: 10px 0 10px 10px;
+    padding: 1.6rem;
+    top: 2rem;
+    right: 1rem;
+    z-index: 1000;
+    width: 30rem;
+    &-text {
+      font-family: 'Alata', sans-serif;
+      font-size: 1.5rem;
+      line-height: 2.4rem;
+      color: #231D4F;
+    }
+  }
+
+  .context-visible {
+
+  }
+}

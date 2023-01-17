@@ -1,0 +1,137 @@
+.landing-places {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding-top: 13rem;
+
+  @include multiple-media(mobileScreen, tabletScreen) {
+    width: 100vw;
+  }
+
+  .places__title {
+    font-family: "AlataRegular", sans-serif;
+    font-size: 3.5rem;
+    line-height: 4.1rem;
+    color: #231D4F;
+
+    @include multiple-media(mobileScreen, tabletScreen) {
+      margin-top: 3.7rem;
+    }
+  }
+  .places__subtitle {
+    font-family: 'BadScript', sans-serif;
+    font-size: 3.5rem;
+    line-height: 7.5rem;
+    text-align: center;
+    text-transform: lowercase;
+    color: #2453FF;
+
+    @include multiple-media(mobileScreen, tabletScreen) {
+      text-align: center;
+    }
+  }
+  .info-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5rem;
+    margin-top: 6rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+    @include multiple-media(mobileScreen, tabletScreen) {
+      width: calc(100vw - 4rem);
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      margin-left: 1.6rem;
+      margin-top: 5rem;
+    }
+
+    .info-card {
+      display: flex;
+      flex-direction: row;
+      flex-grow: 1;
+      gap: 4rem;
+      width: 100%;
+      max-width: 120rem;
+
+      @include multiple-media(mobileScreen, tabletScreen) {
+        width: 100%;
+        margin-bottom: 2rem;
+
+        @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+          &:not(:last-child) {
+            margin-bottom: 5rem;
+          }
+        }
+      }
+      @include multiple-media(mobileScreen) {
+        flex-direction: column;
+      }
+
+      &__image {
+        width: 33rem;
+        height: 100%;
+        border-radius: 4px;
+
+        @include multiple-media(mobileScreen) {
+          width: 100%;
+        }
+
+      }
+
+      &__data {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        .card-info {
+          color: #6BBFE2;
+          font-size: 1.5rem;
+          line-height: 2.1rem;
+          font-family: "AlataRegular", sans-serif;
+        }
+
+        .card-text {
+          font-size: 1.5rem;
+          line-height: 2.7rem;
+          color: #7686AB;
+
+          p {
+            overflow-y: hidden;
+          }
+
+          &__clamp {
+            transition: all 0.5s 0.2s;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+        .card-title {
+          font-family: "AlataRegular", sans-serif;
+          font-size: 2.1rem;
+          line-height: 2.2rem;
+          color: #231D4F;
+          margin-top: 1.2rem;
+          margin-bottom: 1.7rem;
+        }
+        .card-link {
+          display: flex;
+          margin-top: auto;
+          padding-top: 1rem;
+          font-size: 1.5rem;
+          line-height: 2.1rem;
+          color: #2453FF;
+          cursor: pointer;
+        }
+      }
+    }
+
+
+  }
+}

@@ -1,0 +1,136 @@
+.landing-travel-tips {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 16rem;
+  padding-bottom: 14rem;
+
+  @include multiple-media(mobileScreen, tabletScreen) {
+    padding-top: 3.7rem;
+    padding-bottom: 10rem;
+  }
+
+  &__title {
+    font-family: "AlataRegular", sans-serif;
+    font-size: 3rem;
+    line-height: 4.1rem;
+    color: #231D4F;
+  }
+
+  .travel-tips-content {
+    display: flex;
+    flex-direction: row;
+    gap: 12rem;
+    margin-top: 5.7rem;
+    align-items: flex-start;
+
+    @include multiple-media(mobileScreen) {
+      flex-direction: column;
+      width: calc(100vw - 4rem);
+      margin-left: 2rem;
+      margin-right: 2rem;
+      gap: 6rem;
+      margin-top: 0;
+    }
+
+    @include multiple-media(tabletScreen) {
+      flex-direction: column;
+      width: calc(100vw - 10rem);
+      margin-left: 5rem;
+      margin-right: 5rem;
+    }
+
+    .travel-tips-images {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      @include multiple-media(mobileScreen, tabletScreen) {
+        width: 100%;
+
+        @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+          margin-bottom: 6rem;
+        }
+      }
+
+      .image {
+        margin-top: 4rem;
+        max-width: 65rem;
+        width: 100%;
+
+        @include multiple-media(tabletScreen) {
+          max-width: 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    .travel-tips-items {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      align-items: flex-start;
+      max-width: 46rem;
+      width: 50%;
+
+      @include multiple-media(mobileScreen, tabletScreen) {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .travel-tips-item {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include multiple-media(mobileScreen) {
+          @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+            &:not(:last-child) {
+              margin-bottom: 2rem;
+            }
+          }
+        }
+
+        .item-header {
+          display: flex;
+          flex-direction: row;
+          gap: 2rem;
+          align-items: flex-start;
+
+          @include multiple-media(mobileScreen) {
+            @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+              &:not(:last-child) {
+                margin-bottom: 2rem;
+              }
+            }
+          }
+        }
+
+        &__icon {
+          width: 2rem;
+          margin-top: .5rem;
+
+          @include multiple-media(mobileScreen) {
+            @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+              margin-right: 2rem;
+            }
+          }
+        }
+
+        &__title {
+          font-family: "AlataRegular", sans-serif;
+          font-size: 2.1rem;
+          line-height: 2.9rem;
+          color: #231D4F;
+        }
+
+        &__description {
+          font-size: 1.5rem;
+          line-height: 2.1rem;
+          color: #7686AB;
+        }
+      }
+    }
+  }
+}

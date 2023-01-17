@@ -1,0 +1,45 @@
+.modal-delete-cart {
+  display: flex;
+  flex-direction: column;
+  padding: 3.5rem 2.5rem 2.2rem 2.5rem;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+
+  .delete-cart-title {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    text-align: center;
+    color: #231D4F;
+  }
+
+  .delete-cart-description {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    color: #7686AB;
+    margin-top: 3.3rem;
+    margin-bottom: 5rem;
+  }
+
+  .delete-cart-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-end;
+    gap: .8rem;
+
+    .btn-cancel {
+      border: 0.38px solid #8696BB;
+      border-radius: 4px;
+      color: #231D4F;
+      padding: .9rem 1.5rem;
+    }
+
+    .btn-delete {
+      border: 0.38px solid rgba(255, 86, 94, 0.7);
+      border-radius: 4px;
+      color: #FF565E;
+      padding: .9rem 1.5rem;
+    }
+  }
+}

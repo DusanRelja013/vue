@@ -1,0 +1,174 @@
+.landing-welcome {
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-size: cover;
+  padding-bottom: 6rem;
+  align-items: center;
+  padding-top: 6rem;
+
+  @include multiple-media(mobileScreen, tabletScreen, smallScreen) {
+    padding-bottom: 4rem;
+    background-size: cover;
+  }
+
+  &--title {
+    font-family: "AlataRegular", sans-serif;
+    font-size: 7rem;
+    line-height: 7rem;
+    letter-spacing: 0.15px;
+    color: #ffffff;
+    margin-bottom: 4.6rem;
+    margin-top: 11.2rem;
+
+    @include multiple-media(mobileScreen, tabletScreen) {
+      margin-top: 9rem;
+      font-size: 3.5rem;
+      text-align: center;
+    }
+  }
+
+  .trip-info {
+    visibility: hidden;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(86, 103, 137, 0.26);
+    border-radius: 26px;
+    padding: .9rem 2rem;
+    margin-top: 1.6rem;
+
+    @include multiple-media(mobileScreen, tabletScreen, smallScreen) {
+      margin-top: 6rem;
+    }
+
+    &__text {
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+      color: #231D4F;
+    }
+  }
+  .trip-panel {
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border-radius: 4px;
+    width: 103rem;
+    overflow: hidden;
+
+    @include multiple-media(mobileScreen) {
+      width: calc(100vw - 4rem);
+    }
+
+    @include multiple-media(tabletScreen) {
+      width: 80%;
+    }
+
+    .panel-header {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: .8rem;
+      padding-top: 2.8rem;
+      padding-bottom: 2.1rem;
+
+      @include multiple-media(mobileScreen) {
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 1.2rem;
+      }
+
+      @include multiple-media(tabletScreen) {
+        margin-bottom: 2rem;
+      }
+
+      &__status {
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+        color: #FFFFFF;
+        border-radius: 6px;
+        padding: .2rem 1rem;
+        text-transform: uppercase;
+
+        @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+          margin-bottom: 1rem;
+        }
+
+        @include multiple-media(mobileScreen, tabletScreen) {
+          font-family: "M", sans-serif;
+          text-transform: uppercase;
+        }
+      }
+      .restricted {
+        background: #FFD377;
+      }
+
+      .allowed {
+        background: #78e6c2;
+      }
+
+      .forbidden {
+        background: #FF787e;
+      }
+      &__title {
+        font-weight: 400;
+        font-size: 2.1rem;
+        line-height: 2.7rem;
+        color: #231D4F;
+
+        @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+          margin-bottom: 1rem;
+        }
+
+        @include multiple-media(mobileScreen, tabletScreen) {
+          font-size: 1.6rem;
+        }
+      }
+
+      &__link {
+        font-size: 2.1rem;
+        line-height: 2.7rem;
+        color: #3055D9;
+        text-decoration: none;
+
+        @include multiple-media(mobileScreen, tabletScreen) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+    .panel-body {
+      display: flex;
+      flex-direction: row;
+      gap: 1.3rem;
+      justify-content: center;
+      padding: 1.5rem 0;
+      background: #F3F6FC;
+
+      @include multiple-media(mobileScreen) {
+        flex-direction: row;
+        gap: .5rem;
+        padding: 1.5rem;
+      }
+
+      &__status {
+        @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+          margin-right: 1.3rem;
+        }
+      }
+
+      &__description {
+        font-size: 2.1rem;
+        line-height: 2rem;
+        display: flex;
+        align-items: center;
+        color: #231D4F;
+
+        @include multiple-media(mobileScreen, tabletScreen) {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}

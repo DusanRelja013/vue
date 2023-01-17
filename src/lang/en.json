@@ -1,0 +1,9 @@
+{
+  "test": "Test EN",
+  "validations": {
+    "email": "Enter valid email address",
+    "required": "Field is required",
+    "invalid": "Please enter valid data",
+    "confirm_password": "Passwords do not match"
+  }
+}

@@ -1,0 +1,13 @@
+# Set the DevOps team to own files related to workflows and actions.
+# This protects the files from changs without DevOps approval.
+/.github/workflows/ @CIBT-Inc/superchargers
+/template.yaml @CIBT-Inc/superchargers
+/template.yml @CIBT-Inc/superchargers
+app.yaml @CIBT-Inc/superchargers
+app.yml @CIBT-Inc/superchargers
+
+# Protect CODEOWNERS files in any location.
+CODEOWNERS @CIBT-Inc/superchargers
+
+#Protect .gitignore because it is used to exclude files protected by gitsecret
+/.gitignore @CIBT-Inc/superchargers

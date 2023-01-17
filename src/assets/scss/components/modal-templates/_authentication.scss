@@ -1,0 +1,29 @@
+.modal-authentication {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  justify-content: center;
+  padding: 4rem;
+  width: 40rem;
+
+  .authentication-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+
+  }
+  .authentication-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    gap: 2rem;
+
+    .mass-market-input {
+      width: 100%;
+    }
+
+    .mass-market-button {
+      align-self: center;
+    }
+  }
+}

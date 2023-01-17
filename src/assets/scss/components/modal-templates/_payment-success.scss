@@ -1,0 +1,96 @@
+.modal-payment-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(118, 134, 171, 0.3);
+  border-radius: 4px;
+  padding: 5rem 5rem 6.4rem 5rem;
+  background-color: #FFFFFF;
+  width: 47rem;
+
+  @include multiple-media(mobileScreen) {
+    padding: 5rem 1rem 1rem 1rem;
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
+  }
+
+  .logo {
+    display: flex;
+    padding-bottom: 3rem;
+    align-self: center;
+  }
+
+  .success-image {
+    background: rgba(67, 223, 168, 0.2);
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    width: 8.8rem;
+    height: 8.8rem;
+
+    .icon {
+      width: 4.4rem;
+    }
+  }
+
+  .success-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.6rem;
+    margin-top: 1.9rem;
+    margin-bottom: 2.3rem;
+    justify-content: center;
+    align-items: center;
+
+    .content-title {
+      font-size: 1.8rem;
+      color: #231D4F;
+      text-align: center;
+      line-height: normal;
+    }
+    .content-description {
+      font-size: 1.5rem;
+      color: #7686AB;
+      text-align: center;
+      line-height: normal;
+    }
+  }
+
+  .success-actions {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+
+    @include multiple-media(mobileScreen) {
+      flex-grow: 0;
+    }
+
+    .mass-market-button{
+      width: 100%;
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2.6rem;
+    margin-top: 3rem;
+    justify-content: center;
+    text-align: center;
+
+    &-title {
+      font-family: "AlataRegular", sans-serif;
+      font-size: 1.8rem;
+      line-height: 2.6rem;
+      color: #231D4F;
+    }
+
+    &-text {
+      font-family: "AlataRegular", sans-serif;
+      font-size: 1.5rem;
+      line-height: 140%;
+      color: #7686AB;
+    }
+  }
+}

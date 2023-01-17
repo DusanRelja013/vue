@@ -1,0 +1,54 @@
+.empty-travel-card {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 1rem;
+  padding: 1.6rem;
+
+  .card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 1.6rem;
+    border-bottom: 1px solid #E0E0E0;
+
+    &-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #EDCC72;
+      padding: 1rem;
+
+      @include multiple-media(mobileScreen) {
+        @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+          margin-right: 2rem;
+        }
+      }
+
+      &__image {
+        width: 2rem;
+      }
+    }
+
+    &-title {
+      font-size: 1.8rem;
+      line-height: 2.5rem;
+      text-transform: uppercase;
+      color: #231D4F;
+    }
+  }
+
+  .card-body {
+    display: flex;
+    padding-top: 1.6rem;
+
+    &__text {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      color: #7686AB;
+    }
+  }
+}

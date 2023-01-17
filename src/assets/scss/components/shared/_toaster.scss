@@ -1,0 +1,32 @@
+.toaster {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 10rem;
+  right: 2rem;
+  box-shadow: inset 0px -2px 0px #6BBAA3;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem;
+  min-width: 34rem;
+  z-index: 1000000;
+  background-color: #6BBAA3;
+
+  &-title {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    color: #FFFFFF;
+  }
+
+  &-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    background-color: #FFFFFF;
+  }
+}

@@ -1,0 +1,107 @@
+.mass-market-checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  width: auto;
+  transition: 0.225s ease-out;
+  cursor: pointer;
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+
+    &:hover {
+      & ~ .mass-market-checkbox__button {
+        // border-color: $c-form-element--hover;
+      }
+    }
+
+    &:focus {
+      & ~ .mass-market-checkbox__button {
+        //box-shadow: 0 0 5px 0 rgba($c-form-element--hover, 0.5) inset;
+        //border-color: $c-form-element--focus;
+      }
+
+      & ~ .mass-market-checkbox__label {
+        //color: $c-form-element--focus;
+      }
+    }
+
+    &:checked {
+      & ~ .mass-market-checkbox__button {
+        border-color: #2453FF;
+        background-color: #2453FF;
+        .check-icon {
+          opacity: 1;
+        }
+        &:after {
+          content: " ";
+          display: block;
+          width: 100%;
+          height: 100%;
+          // background-color: $c-form-element--hover;
+          position: relative;
+        }
+      }
+
+      &:focus {
+        & ~ .mass-market-checkbox__button {
+          // border-color: $c-form-element--focus;
+
+          &:after {
+            // background-color: $c-form-element--focus;
+          }
+        }
+      }
+    }
+  }
+
+  &__button {
+    position: relative;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 24px;
+    min-width: 24px;
+    transition: 0.225s ease-out;
+    text-align: center;
+    border: 1px solid #2453FF;
+    .check-icon {
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      opacity: 0;
+      color: white;
+      z-index: 10;
+      font-size: 18px;
+    }
+  }
+
+  &__label {
+    line-height: 1.2;
+    height: 100%;
+    width: auto;
+    padding: 3px 10px;
+    cursor: pointer;
+    transition: all 0.225s ease-out;
+    color: #7686AB;
+    font-size: 1.3rem;
+
+    a {
+      color: #3055D9;
+    }
+  }
+
+  &:hover {
+    & ~ .e-form__input-group__message--helper {
+      display: block;
+    }
+  }
+
+  &__invalid {
+    .mass-market-checkbox__button {
+      border-color: red;
+    }
+  }
+}

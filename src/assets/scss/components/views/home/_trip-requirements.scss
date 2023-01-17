@@ -1,0 +1,67 @@
+.home-trip-requirements {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 100%;
+  margin-top: -6rem;
+
+  @include multiple-media(mobileScreen, tabletScreen, smallScreen) {
+    background-size: cover;
+  }
+
+  @include multiple-media(mobileScreen) {
+    padding-top: 10rem;
+  }
+
+  @include multiple-media(tabletScreen) {
+    padding-top: 10rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  &__wrapper {
+    display: flex;
+
+    @include multiple-media(mobileScreen, tabletScreen) {
+      display: none;
+    }
+  }
+
+
+  .trip-title {
+    font-family: "AlataRegular", sans-serif;
+    font-size: 7rem;
+    line-height: 4.6rem;
+    color: #FFFFFF;
+    margin-top: 22rem;
+
+    @include multiple-media(mobileScreen, tabletScreen) {
+      margin-top: 10rem;
+      font-size: 3.5rem;
+      margin-bottom: 6.4rem;
+      text-align: center;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    @include multiple-media(tabletScreen) {
+      font-size: 5rem;
+    }
+  }
+  .trip-description {
+    font-size: 2.3rem;
+    line-height: 3rem;
+    color: #FFFFFF;
+    width: 86rem;
+    margin-top: 3.9rem;
+    text-align: center;
+
+    @include multiple-media(mobileScreen, tabletScreen) {
+      display: none;
+    }
+  }
+}

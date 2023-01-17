@@ -1,0 +1,61 @@
+.modal-travel-requirements {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 3.5rem;
+
+  @include multiple-media(mobileScreen) {
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100vw;
+    border-radius: 0;
+  }
+
+  .requirements-close {
+    width: 1.8rem;
+    display: flex;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+
+  .requirements-status {
+    background: #F76D80;
+    border-radius: 6px;
+    padding: .5rem 1rem;
+    width: fit-content;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+
+  .restricted {
+    background: #FFD377;
+  }
+
+  .allowed {
+    background: #78e6c2;
+  }
+
+  .forbidden {
+    background: #FF787e;
+  }
+
+  .requirements-title {
+    font-size: 2.6rem;
+    line-height: 2.7rem;
+    color: #231D4F;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+
+    @include multiple-media(mobileScreen) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .requirements-description {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    color: #231D4F;
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,120 @@
+.home-how-it-works {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0;
+  gap: 12rem;
+  flex-grow: 1;
+  padding: 18rem 0;
+
+  @include multiple-media(mobileScreen, tabletScreen) {
+    flex-direction: column;
+    gap: 4rem;
+    padding: 1.6rem;
+    margin-bottom: 4rem;
+    margin-top: 5rem;
+  }
+
+  .journey {
+    display: flex;
+    flex-direction: column;
+    max-width: 60rem;
+
+    @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+      margin-bottom: 4rem;
+    }
+
+    @include multiple-media(tabletScreen) {
+      max-width: 100%;
+    }
+
+    &-title {
+      font-size: 3rem;
+      line-height: 3.6rem;
+      color: #231D4F;
+      margin-bottom: 3.2rem;
+    }
+
+    &-description {
+      font-size: 1.8rem;
+      line-height: 2.6rem;
+      color: #7686AB;
+      margin-bottom: 4rem;
+    }
+
+    &-image {
+      width: 100%;
+      max-width: 60rem;
+
+      @include multiple-media(tabletScreen) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    max-width: 50rem;
+
+    @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+      margin-bottom: 4rem;
+    }
+
+    @include multiple-media(tabletScreen) {
+      max-width: 100%;
+    }
+
+    .step {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 7rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &-header {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2rem;
+        border-bottom: 1px solid #E0E0E0;
+        padding-bottom: 1.6rem;
+
+        .header-number {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 5rem;
+          min-width: 5rem;
+          height: 5rem;
+          border: 1.5px solid #009AFF;
+          border-radius: 50%;
+          font-size: 2rem;
+
+          @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+            margin-right: 2rem;
+          }
+        }
+
+        .header-title {
+          font-size: 2.1rem;
+          line-height: 2.9rem;
+          color: #231D4F;
+        }
+      }
+
+      &-content {
+        padding-top: 1.6rem;
+
+        .content-text {
+          color: #7686AB;
+          font-size: 1.6rem;
+          line-height: 2.2rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.payment {
+  display: flex;
+  flex-direction: row;
+  margin-top: 12rem;
+  margin-bottom: 10rem;
+  align-items: flex-start;
+  gap: 5rem;
+  justify-content: center;
+
+  @include multiple-media(mobileScreen, tabletScreen) {
+    flex-direction: column;
+  }
+
+  @include multiple-media(tabletScreen) {
+
+  }
+}

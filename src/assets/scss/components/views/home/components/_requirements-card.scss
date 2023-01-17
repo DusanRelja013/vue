@@ -1,0 +1,171 @@
+.trip-requirements {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #FFFFFF;
+  padding: 3.5rem;
+  margin-bottom: 23.3rem;
+  margin-top: 4.8rem;
+
+  @include multiple-media(mobileScreen, tabletScreen) {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding: 3rem 2rem;
+    margin-bottom: 0;
+  }
+
+  @include multiple-media(smallScreen) {
+    margin-bottom: 10rem;
+  }
+
+  @include multiple-media(mobileScreen) {
+    margin-top: 0;
+  }
+
+  @include multiple-media(tabletScreen) {
+    padding: 4rem 5rem;
+    margin-top: 0;
+  }
+
+  &--title {
+    font-size: 2.1rem;
+    line-height: 2.6rem;
+    color: #231D4F;
+    text-align: center;
+
+    @include multiple-media(mobileScreen, tabletScreen) {
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 0 1rem;
+    }
+  }
+
+  &-search {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    gap: .9rem;
+    margin-top: 2.6rem;
+    align-items: center;
+    justify-content: center;
+
+    @include multiple-media(mobileScreen, tabletScreen) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include multiple-media(tabletScreen) {
+      max-width: 50rem;
+      width: 100%;
+      margin: 2rem auto 0 auto;
+    }
+
+    > div, .mass-market-button--important {
+
+      @include multiple-media(mobileScreen, tabletScreen) {
+        width: 100%;
+
+        @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+          margin-bottom: .9rem;
+        }
+      }
+    }
+
+    .mass-market-button {
+      height: 4.8rem;
+
+      @include multiple-media(tabletScreen) {
+        width: fit-content;
+        margin-top: 2rem;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        pointer-events: unset;
+      }
+    }
+
+    .mass-market-datepicker {
+      .dp__pointer {
+        min-height: 40px;
+        min-width: 24rem;
+        max-width: 24rem;
+
+        @include multiple-media(mobileScreen) {
+          min-width: 100%;
+          max-width: 100%;
+        }
+      }
+
+      @include multiple-media(mobileScreen) {
+        @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+          margin-bottom: .9rem;
+        }
+      }
+    }
+
+    .mass-market-select {
+
+      .select {
+        min-width: 24rem;
+        max-width: 24rem;
+
+        @include multiple-media(mobileScreen) {
+          min-width: 100%;
+          max-width: 100%;
+        }
+      }
+
+      .multiselect--disabled {
+        cursor: not-allowed;
+        pointer-events: unset;
+        border-radius: 5px;
+        opacity: .8;
+
+        .multiselect__select, .multiselect__tags {
+          background-color: #FFFFFF;
+        }
+
+        .multiselect__select {
+          right: 2px;
+          bottom: 1px;
+          top: 2px;
+          height: 4.4rem;
+        }
+      }
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.7rem;
+
+    @include multiple-media(mobileScreen) {
+      display: none;
+    }
+
+    .info-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      color: #7686AB;
+
+      &__title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+
+      &__icon {
+        background: #E9EEFF;
+        border-radius: 50%;
+        padding: .4rem;
+      }
+    }
+  }
+}

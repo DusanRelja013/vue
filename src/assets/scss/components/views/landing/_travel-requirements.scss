@@ -1,0 +1,152 @@
+.landing-travel-requirements {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 5.4rem;
+  justify-content: center;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  // background: #F7F8FA;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include multiple-media(mobileScreen, tabletScreen) {
+    flex-direction: column;
+    width: 100vw;
+    padding:  4rem 1.6rem;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  @include multiple-media(tabletScreen) {
+    flex-direction: row;
+    gap: 2.7rem;
+  }
+
+  .travel-services {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    @include multiple-media(tabletScreen) {
+      width: 50%;
+    }
+
+    &-main {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+
+      @include multiple-media(mobileScreen) {
+        @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+          &:not(:last-child) {
+            margin-bottom: 5rem;
+          }
+        }
+      }
+
+      &--title {
+        font-weight: 400;
+        font-size: 3rem;
+        line-height: 2.7rem;
+        display: flex;
+        align-items: center;
+        color: #231D4F;
+
+        @include multiple-media(mobileScreen) {
+          line-height: 3.2rem;
+
+          @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+            &:not(:last-child) {
+              margin-bottom: 5rem;
+            }
+          }
+        }
+      }
+    }
+
+    &-additional {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      @include multiple-media(mobileScreen) {
+        @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+          &:not(:last-child) {
+            margin-bottom: 5rem;
+          }
+        }
+      }
+
+      &--title {
+        font-size: 2.3rem;
+        line-height: 2.7rem;
+        display: flex;
+        align-items: center;
+        color: #231D4F;
+
+        @include multiple-media(mobileScreen) {
+          @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+            margin-bottom: 3rem;
+          }
+        }
+      }
+
+      .travel-card {
+        @include multiple-media(mobileScreen) {
+          @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+            &:not(:last-child) {
+              margin-bottom: 3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .travel-facts {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    @include multiple-media(tabletScreen) {
+      width: 50%;
+    }
+
+    &__title {
+      font-size: 2.1rem;
+      line-height: 2.7rem;
+      display: flex;
+      align-items: center;
+      text-transform: capitalize;
+      color: #231D4F;
+    }
+
+    &__items {
+      display: flex;
+      flex-direction: column;
+      gap: 1.9rem;
+    }
+  }
+
+  &__empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 0;
+    height: 40rem;
+
+    .empty-title {
+      font-family: "AlataRegular", sans-serif;
+      font-size: 3rem;
+      line-height: 4.1rem;
+      color: #231D4F;
+    }
+  }
+}

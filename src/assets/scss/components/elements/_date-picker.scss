@@ -1,0 +1,82 @@
+.mass-market-datepicker {
+  display: flex;
+  height: 4.8rem;
+  width: 100%;
+  font-family: "AlataRegular", sans-serif;
+  position: relative;
+
+
+  div {
+    @include multiple-media(mobileScreen, tabletScreen) {
+      width: 100%;
+    }
+  }
+
+  .dp__input_wrap {
+    height: 4.8rem;
+    min-width: 23rem;
+
+    &::placeholder {
+      color: #7686AB;
+    }
+  }
+  .dp__pointer {
+    height: 4.8rem;
+    min-width: 28rem;
+    font-size: 1.4rem;
+    color: #231D4F;
+
+    &::placeholder {
+      color: #7686AB;
+    }
+  }
+
+  .dp__input {
+    font-family: AlataRegular, sans-serif;
+    border: 1px solid #D6DBE6;
+
+    &:hover {
+      border: 2px solid #BECCFF;
+    }
+
+    &_icon {
+      color: #7686AB;
+      width: 2rem;
+      height: 2rem;
+    }
+
+    &::placeholder {
+      color: #7686AB;
+    }
+  }
+
+  .dp__main {
+    width: 100%;
+  }
+
+  .dp__disabled {
+    height: 4.8rem;
+    font-size: 1.4rem;
+  }
+
+  .floating-label {
+    position: absolute;
+    pointer-events: none;
+    left: 4rem;
+    top: 1.5rem;
+    transition: 0.2s ease all;
+    color: #7686AB;
+    font-family: "AlataRegular", sans-serif;
+    font-size: 1.6rem;
+  }
+
+  .invalid-data {
+    position: absolute;
+    z-index: 100;
+    right: 1rem;
+    top: 1.5rem;
+    background-color: white;
+    width: 2rem;
+    height: 2rem;
+  }
+}

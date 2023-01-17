@@ -1,0 +1,75 @@
+.mass-market-toggle {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+
+  @include multiple-media(mobileScreen) {
+    margin-left: 0;
+    align-self: flex-start;
+  }
+
+  .mass-market-label {
+    margin-bottom: 1.2rem;
+  }
+  .toggle-wrapper {
+    height: 4.8rem;
+    padding-top: 5px;
+
+    .toggle {
+      position: relative;
+      display: inline-block;
+      width: 48px;
+      height: 24px;
+
+      &-input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:checked + .slider {
+          background-color: #2453FF;
+        }
+
+        &:checked + .slider:before {
+          -webkit-transform: translateX(24px);
+          -ms-transform: translateX(24px);
+          transform: translateX(24px);
+        }
+
+        &:checked + .disabled {
+          background-color: #E1E6F2;
+        }
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #B2BED9;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 20px;
+
+        &:before {
+          position: absolute;
+          content: "";
+          height: 20px;
+          width: 20px;
+          left: 2px;
+          bottom: 2px;
+          background-color: #FFFFFF;
+          -webkit-transition: .4s;
+          transition: .4s;
+          border-radius: 50%;
+        }
+      }
+
+      .disabled {
+        opacity: .5;
+      }
+    }
+  }
+}

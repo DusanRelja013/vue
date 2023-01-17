@@ -1,0 +1,10 @@
+.home-page {
+
+  &-requirements-card {
+    display: none !important;
+
+    @include multiple-media(mobileScreen, tabletScreen) {
+      display: flex !important;
+    }
+  }
+}

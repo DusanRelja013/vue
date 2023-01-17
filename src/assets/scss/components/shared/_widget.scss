@@ -1,0 +1,146 @@
+.search-widget {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(118, 134, 171, 0.3);
+  border-radius: 26px;
+  padding: .7rem 1rem .7rem 2rem;
+  margin-top: 1.2rem;
+  cursor: pointer;
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);;
+
+  @include multiple-media(mobileScreen, tabletScreen) {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  @include multiple-media(tabletScreen) {
+    margin-top: 1.7rem;
+  }
+
+  @include multiple-media(mobileScreen) {
+    padding: .7rem;
+  }
+
+  .line {
+    height: 2rem;
+    border-left: 1px solid #D1D8E9;
+  }
+
+  .mass-market-select {
+
+    .select {
+      min-width: 12rem;
+      width: 12rem;
+      height: 3rem;
+      min-height: 2rem;
+
+      @include multiple-media(mobileScreen, tabletScreen) {
+        min-width: 10rem;
+        width: 10rem;
+      }
+
+      .multiselect__tags {
+        border: none;
+        padding: 0 5px 0 ;
+        min-height: 2rem;
+        overflow:hidden;
+        white-space:nowrap;
+        text-overflow: ellipsis;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        @include multiple-media(mobileScreen, tabletScreen) {
+          padding: 0;
+        }
+
+        .multiselect__placeholder {
+          margin-bottom: 0;
+        }
+
+        .multiselect__input {
+          font-size: 1.8rem;
+        }
+
+        .multiselect__single {
+          text-align: center;
+          padding-left: 0;
+          margin-bottom: 0;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      .multiselect__select {
+        display: none;
+      }
+
+      .multiselect__content-wrapper {
+        max-width: 30rem;
+        width: 30rem;
+      }
+
+
+      .multiselect__content-wrapper {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .widget-datepicker {
+    max-width: 13rem;
+
+    .dp__input_wrap {
+
+      min-width: 100%;
+
+
+      .dp__input {
+        border: none;
+        font-size: 1.6rem;
+        color: #231D4F;
+        font-family: "AlataRegular", sans-serif;
+        padding-bottom: 0;
+      }
+
+      &::placeholder {
+        color: #7686AB;
+      }
+
+      .dp__input_icon_pad {
+        padding-left: .5rem;
+        font-size: 1.6rem;
+        color: #231D4F;
+        padding-top: 0;
+      }
+
+      .dp__icon {
+        display: none;
+      }
+
+      .dp__pointer {
+        min-width: 100%;
+      }
+    }
+  }
+
+  .mass-market-button {
+
+    &--valid {
+      padding: .7rem;
+      background: #2453FF;
+      border-radius: 50%;
+    }
+  }
+}

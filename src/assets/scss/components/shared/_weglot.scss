@@ -1,0 +1,60 @@
+.weglot-container, .wg-default {
+  bottom: unset !important;
+  top: 2rem;
+  right: 19rem !important;
+
+  @include multiple-media(mobileScreen) {
+    right: 25rem !important;
+    top: 1rem !important;
+    left: 8rem;
+  }
+
+  @include multiple-media(tabletScreen) {
+    right: 18rem !important;
+  }
+
+  .country-selector {
+    bottom: unset !important;
+    top: 2rem;
+    right: 19rem !important;
+    background-color: transparent !important;
+    width: 7rem;
+    max-width: 7rem;
+    cursor: pointer;
+
+    @include multiple-media(mobileScreen) {
+      right: 25rem !important;
+      top: 1rem !important;
+      left: 8rem;
+    }
+
+    @include multiple-media(tabletScreen) {
+      right: 18rem !important;
+    }
+
+    .wgcurrent {
+      border: none !important;
+
+      &:after {
+        color: #ffffff !important;
+        filter: invert(1);
+
+        @include multiple-media(mobileScreen) {
+          right: 2rem !important;
+        }
+      }
+
+      a {
+        color: #ffffff !important;
+        font-size: 1.5rem !important;
+      }
+    }
+  }
+
+  .wg-li {
+
+    a {
+      color: #000000 !important;
+    }
+  }
+}

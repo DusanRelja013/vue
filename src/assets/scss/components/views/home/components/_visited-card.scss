@@ -1,0 +1,118 @@
+.visited-card {
+  display: flex;
+  flex-direction: column;
+  width: 30.5rem;
+
+  @include multiple-media(mobileScreen) {
+    min-width: 30rem;
+    width: 100%;
+
+    @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+      padding-bottom: 3rem;
+    }
+  }
+
+
+  &-view {
+    display: flex;
+    height: 20rem;
+    position: relative;
+
+    &__image {
+      width: 100%;
+    }
+
+    .view-title {
+      font-size: 1.5rem;
+      color: #231D4F;
+      position: absolute;
+      bottom: 2.5rem;
+      right: 2.5rem;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 4px;
+      padding: .6rem;
+    }
+    .view-icon {
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      background-color: #fff;
+      border-radius: 50%;
+      padding: .5rem;
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+
+    .card-header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      margin-top: 2rem;
+
+      &-title {
+        font-size: 2.3rem;
+        line-height: 3.1rem;
+        color: #231D4F;
+      }
+
+      &-messages {
+        display: flex;
+        align-items: center;
+        background: #FFFFFF;
+        border: 1px solid #C4C4C4;
+        border-radius: 5px;
+        padding: .4rem .7rem;
+        gap: .4rem;
+
+        &__number {
+          font-size: 1.4rem;
+          line-height: 2.2rem;
+        }
+
+        &__icon {
+
+        }
+      }
+    }
+
+    .card-description {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.2rem;
+
+      .description-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+
+        @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+          &:not(:last-child) {
+            margin-bottom: 1.2rem;
+          }
+        }
+
+        &__icon {
+          background: rgba(82, 67, 194, 0.103693);
+          border-radius: 50%;
+          padding: .4rem;
+
+          @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+            margin-right: 1rem;
+          }
+        }
+
+        &__title {
+          font-size: 1.5rem;
+          color: #7686AB;
+        }
+      }
+    }
+  }
+}
