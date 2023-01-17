@@ -447,9 +447,7 @@
         &__content {
           padding-right: 0;
 
-          .content-footer {
-            flex-wrap:wrap;
-          }
+          
 
           @include multiple-media(mobileScreen) {
             padding-right: 2rem;
